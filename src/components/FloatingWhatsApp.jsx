@@ -5,7 +5,9 @@ export function FloatingWhatsApp() {
       className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full border border-emerald-300/60 bg-emerald-500 px-5 py-3 text-sm font-semibold text-emerald-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-emerald-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200"
       aria-label="Order through WhatsApp"
     >
-      <span className="text-base">💬</span>
+      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-950 text-[11px] text-emerald-200">
+        WA
+      </span>
       WhatsApp Order
     </a>
   )

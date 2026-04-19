@@ -7,19 +7,19 @@ export default {
     extend: {
       colors: {
         espresso: {
-          950: '#14100f',
-          900: '#1c1614',
-          800: '#2b201d',
+          950: '#081915',
+          900: '#0f2b24',
+          800: '#1d443a',
         },
         cream: {
-          50: '#fcf8ef',
-          100: '#f6efdf',
-          200: '#ead8b5',
+          50: '#fffaf0',
+          100: '#f7ecd4',
+          200: '#ebd7ad',
         },
         gold: {
-          400: '#d6b466',
-          500: '#c79a3f',
-          600: '#ad7e29',
+          400: '#e3c173',
+          500: '#d4a144',
+          600: '#bb812d',
         },
       },
       fontFamily: {
@@ -27,9 +27,9 @@ export default {
         body: ['"Manrope"', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 15px 45px rgba(199, 154, 63, 0.18)',
-        card: '0 20px 40px rgba(0, 0, 0, 0.28)',
-        soft: '0 14px 30px rgba(20, 16, 15, 0.16)',
+        glow: '0 18px 55px rgba(212, 161, 68, 0.28)',
+        card: '0 24px 46px rgba(6, 19, 16, 0.34)',
+        soft: '0 16px 32px rgba(8, 25, 21, 0.18)',
       },
       keyframes: {
         float: {
@@ -44,11 +44,16 @@ export default {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' },
         },
+        slowPulse: {
+          '0%, 100%': { opacity: 0.65 },
+          '50%': { opacity: 1 },
+        },
       },
       animation: {
         float: 'float 6s ease-in-out infinite',
         fadeUp: 'fadeUp 700ms ease-out both',
         shimmer: 'shimmer 2.6s linear infinite',
+        slowPulse: 'slowPulse 5s ease-in-out infinite',
       },
     },
   },

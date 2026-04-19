@@ -1,3 +1,5 @@
+import { heroImage } from '../data/siteData'
+
 const heroHighlights = [
   'Homemade desserts',
   'Made from scratch',
@@ -30,23 +32,28 @@ export function HeroSection() {
         </div>
 
         <div className="relative animate-float">
-          <div className="relative rounded-[2rem] border border-gold-500/35 bg-gradient-to-br from-cream-50 via-cream-100 to-amber-100 p-1 shadow-glow">
-            <div className="rounded-[1.7rem] bg-[radial-gradient(circle_at_top,#fff9ed,transparent_62%),linear-gradient(145deg,#fff6e2_5%,#f7e4bf_47%,#efd4a0_100%)] p-7 sm:p-9">
-              <div className="rounded-[1.4rem] bg-cream-50/70 p-7 shadow-soft backdrop-blur-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-espresso-800/75">Featured Today</p>
-                <h3 className="mt-2 font-heading text-3xl font-semibold text-espresso-900">Pistachio Rose Cake</h3>
-                <p className="mt-2 text-sm text-espresso-900/80">
-                  Delicate floral notes, creamy pistachio layers, and a soft sponge baked fresh for collection.
-                </p>
-                <div className="mt-5 flex items-center justify-between">
-                  <span className="rounded-full bg-espresso-900 px-4 py-2 text-sm font-semibold text-gold-400">From GBP 52</span>
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-espresso-900/70">Top Rated</span>
-                </div>
+          <div className="relative overflow-hidden rounded-[2rem] border border-gold-500/35 shadow-glow">
+            <img
+              src={heroImage}
+              alt="Artisan decorated cake and desserts"
+              className="h-[26rem] w-full object-cover object-center sm:h-[30rem]"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/85 via-espresso-900/25 to-transparent" />
+            <div className="absolute inset-x-5 bottom-5 rounded-3xl border border-cream-200/20 bg-espresso-950/65 p-5 backdrop-blur-sm sm:inset-x-7 sm:bottom-7 sm:p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-400">Featured Today</p>
+              <h3 className="mt-2 font-heading text-3xl font-semibold text-cream-50">Pistachio Rose Cake</h3>
+              <p className="mt-2 text-sm text-cream-100/85">
+                Floral sponge layers with pistachio cream and handcrafted finishing details.
+              </p>
+              <div className="mt-5 flex items-center justify-between">
+                <span className="rounded-full bg-gold-500 px-4 py-2 text-sm font-semibold text-espresso-950">From GBP 52</span>
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cream-100/75">Top Rated</span>
               </div>
             </div>
           </div>
           <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-gold-500/30 blur-2xl" />
-          <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-amber-100/30 blur-2xl" />
+          <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-emerald-200/20 blur-2xl" />
         </div>
       </div>
 

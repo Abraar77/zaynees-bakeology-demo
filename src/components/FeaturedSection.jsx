@@ -6,7 +6,7 @@ function Rating({ value }) {
     <div className="flex items-center gap-1 text-sm">
       {Array.from({ length: 5 }, (_, index) => (
         <span key={index} className={index < stars ? 'text-gold-500' : 'text-cream-200/40'}>
-          ★
+          {'\u2605'}
         </span>
       ))}
       <span className="ml-1 text-xs text-espresso-800/80">{value.toFixed(1)}</span>
@@ -14,27 +14,39 @@ function Rating({ value }) {
   )
 }
 
-export function FeaturedSection({ items, onEnquirySelect }) {
+export function FeaturedSection({ items, onAddToCart }) {
+  const quickOrder = (item) => {
+    onAddToCart(item)
+    const target = document.getElementById('order')
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <section id="featured" className="py-16 sm:py-20">
       <div className="section-shell">
         <SectionHeading
           eyebrow="Featured Selection"
           title="Freshly Baked Highlights"
-          description="A premium showcase of customer favorites with realistic demo copy, ratings, and order actions."
+          description="Realistic product cards with random bakery visuals, ratings, pricing, and live cart actions."
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {items.map((item) => (
             <article
-              key={item.name}
+              key={item.id}
               className="group overflow-hidden rounded-3xl border border-cream-200/15 bg-cream-50 shadow-card transition duration-300 hover:-translate-y-1.5"
             >
-              <div className={`relative h-44 overflow-hidden bg-gradient-to-br ${item.imageTone}`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(255,255,255,.8),transparent_35%),radial-gradient(circle_at_20%_80%,rgba(199,154,63,.2),transparent_42%)]" />
-                <span className="absolute left-4 top-4 rounded-full bg-espresso-900 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-400">
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={item.imageUrl}
+                  alt={item.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/55 via-transparent to-transparent" />
+                <span className="absolute left-4 top-4 rounded-full bg-cream-50/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-gold-600">
                   {item.tag}
                 </span>
-                <div className="absolute bottom-4 left-4 rounded-full bg-cream-50/90 px-3 py-1 text-xs font-semibold text-espresso-900">
+                <div className="absolute bottom-4 left-4 rounded-full bg-espresso-900/90 px-3 py-1 text-xs font-semibold text-gold-400">
                   Handmade
                 </div>
               </div>
@@ -49,16 +61,17 @@ export function FeaturedSection({ items, onEnquirySelect }) {
                   <button
                     type="button"
                     className="flex-1 rounded-full border border-espresso-900/20 bg-espresso-900 px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-cream-50 transition hover:bg-espresso-800"
-                    onClick={() => onEnquirySelect(item.name)}
+                    onClick={() => onAddToCart(item)}
                   >
-                    Add to Enquiry
+                    Add to Cart
                   </button>
-                  <a
+                  <button
+                    type="button"
                     className="flex-1 rounded-full border border-gold-600/25 bg-gold-500/20 px-4 py-2 text-center text-xs font-semibold uppercase tracking-[0.08em] text-gold-600 transition hover:bg-gold-500/30"
-                    href={`https://wa.me/440000000000?text=${encodeURIComponent(`Hi, I want to order ${item.name}.`)}`}
+                    onClick={() => quickOrder(item)}
                   >
                     Order Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </article>

@@ -19,7 +19,16 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-gold-500/20 bg-gradient-to-br from-cream-50 to-cream-100 p-6 text-espresso-900">
+          <div className="space-y-4">
+            <div className="overflow-hidden rounded-3xl border border-gold-500/20">
+              <img
+                src="https://source.unsplash.com/1000x800/?bakery,kitchen,artisan&sig=302"
+                alt="Home bakery workspace"
+                className="h-44 w-full object-cover sm:h-56"
+                loading="lazy"
+              />
+            </div>
+            <div className="rounded-3xl border border-gold-500/20 bg-gradient-to-br from-cream-50 to-cream-100 p-6 text-espresso-900">
             <h3 className="font-heading text-3xl font-semibold">How It Works</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li className="rounded-2xl border border-espresso-900/10 bg-white/65 p-3">
@@ -32,6 +41,7 @@ export function AboutSection() {
                 <span className="mr-1 font-semibold">3.</span> Collect your freshly prepared desserts from E17.
               </li>
             </ul>
+            </div>
           </div>
         </div>
       </div>

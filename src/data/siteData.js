@@ -1,133 +1,144 @@
+export const heroImage =
+  'https://source.unsplash.com/1400x1000/?bakery,cake,decorated&sig=301'
+
 export const categories = [
   {
     name: 'Signature Cakes',
-    description: 'Classic sponge, layered creams, and elegant finishes.',
+    description: 'Layered sponge cakes finished with smooth buttercream and elegant textures.',
     fromPrice: 38,
     leadTime: '7 days notice',
-    badge: 'Best Seller',
-    icon: '🎂',
+    badge: 'Most Requested',
+    imageUrl: 'https://source.unsplash.com/900x700/?birthday,cake,bakery&sig=101',
   },
   {
     name: 'Cupcakes',
-    description: 'Swirled buttercream cupcakes in curated flavour boxes.',
+    description: 'Dozen boxes with premium buttercream swirls and seasonal toppings.',
     fromPrice: 16,
     leadTime: '48 hrs',
-    badge: 'Party Pack',
-    icon: '🧁',
+    badge: 'Party Favourite',
+    imageUrl: 'https://source.unsplash.com/900x700/?cupcakes,bakery&sig=102',
   },
   {
     name: 'Brownies',
-    description: 'Fudgy trays with rich chocolate and premium toppings.',
+    description: 'Fudgy trays with rich cocoa and gourmet toppings.',
     fromPrice: 14,
     leadTime: '48 hrs',
     badge: 'Halal-Friendly',
-    icon: '🍫',
+    imageUrl: 'https://source.unsplash.com/900x700/?brownies,chocolate,dessert&sig=103',
   },
   {
     name: 'Cookies',
-    description: 'Soft-center cookies baked fresh for collection day.',
+    description: 'Soft center cookies baked in small batches for collection day.',
     fromPrice: 12,
     leadTime: '48 hrs',
     badge: 'Fresh Batch',
-    icon: '🍪',
+    imageUrl: 'https://source.unsplash.com/900x700/?cookies,bakery&sig=104',
   },
   {
     name: 'Dessert Cups',
-    description: 'Layered dessert jars for gifting and celebration tables.',
+    description: 'Layered dessert cups perfect for events and gift tables.',
     fromPrice: 24,
     leadTime: '3 days',
     badge: 'Event Ready',
-    icon: '🥛',
+    imageUrl: 'https://source.unsplash.com/900x700/?dessert,cups,parfait&sig=105',
   },
   {
     name: 'Swiss Rolls',
-    description: 'Fluffy vanilla and chocolate rolls with silky fillings.',
+    description: 'Soft sponge rolls with creamy fillings and glazed finishes.',
     fromPrice: 18,
     leadTime: '3 days',
-    badge: 'Weekend Special',
-    icon: '🍰',
+    badge: 'Weekend Pick',
+    imageUrl: 'https://source.unsplash.com/900x700/?swiss,roll,cake&sig=106',
   },
   {
     name: 'Custom Celebration Cakes',
-    description: 'Tailored colours, themes, and finishing for milestones.',
+    description: 'Tailored themes, colours, toppers, and flavours for milestones.',
     fromPrice: 55,
     leadTime: '1 week+',
     badge: 'Custom Design',
-    icon: '✨',
+    imageUrl: 'https://source.unsplash.com/900x700/?custom,cake,wedding&sig=107',
   },
 ]
 
 export const featuredItems = [
   {
+    id: 'pistachio-rose-cake',
     name: 'Pistachio Rose Cake',
-    description: 'Moist sponge with rose milk soak and pistachio chantilly.',
+    description: 'Rose milk soak, pistachio cream, and delicate floral finish.',
     price: 52,
     rating: 4.9,
-    imageTone: 'from-rose-100 via-amber-50 to-orange-100',
     tag: 'Signature',
+    imageUrl: 'https://source.unsplash.com/1000x800/?rose,cake,dessert&sig=201',
   },
   {
+    id: 'triple-chocolate-brownie-box',
     name: 'Triple Chocolate Brownie Box',
-    description: 'Deep cocoa brownies with ganache drizzle and sea salt.',
+    description: 'Deep cocoa brownies with glossy ganache and sea-salt finish.',
     price: 22,
     rating: 4.8,
-    imageTone: 'from-amber-200 via-orange-100 to-stone-100',
     tag: 'Top Rated',
+    imageUrl: 'https://source.unsplash.com/1000x800/?brownie,chocolate,bakery&sig=202',
   },
   {
+    id: 'vanilla-berry-cupcake-dozen',
     name: 'Vanilla Berry Cupcake Dozen',
-    description: 'Light vanilla cupcakes with berry compote and cream swirls.',
+    description: 'Soft vanilla cupcakes with berry compote and whipped cream.',
     price: 28,
     rating: 4.7,
-    imageTone: 'from-fuchsia-100 via-rose-50 to-amber-50',
     tag: 'Dozen Pack',
+    imageUrl: 'https://source.unsplash.com/1000x800/?cupcake,vanilla,berry&sig=203',
   },
   {
+    id: 'lotus-biscoff-dessert-cups',
     name: 'Lotus Biscoff Dessert Cups',
     description: 'Creamy lotus layers with biscuit crumble and caramel silk.',
     price: 26,
     rating: 4.9,
-    imageTone: 'from-amber-100 via-yellow-50 to-orange-100',
     tag: 'Trending',
+    imageUrl: 'https://source.unsplash.com/1000x800/?dessert,cup,cookie&sig=204',
   },
   {
+    id: 'kinder-cookie-sandwich',
     name: 'Kinder Cookie Sandwich',
     description: 'Chunky cookies with a soft white chocolate hazelnut center.',
     price: 18,
     rating: 4.8,
-    imageTone: 'from-zinc-100 via-amber-100 to-stone-200',
     tag: 'Freshly Baked',
+    imageUrl: 'https://source.unsplash.com/1000x800/?cookie,sandwich,dessert&sig=205',
   },
   {
+    id: 'mango-cream-swiss-roll',
     name: 'Mango Cream Swiss Roll',
     description: 'Airy vanilla roll with mango cream and glazed fruit pearls.',
     price: 24,
     rating: 4.6,
-    imageTone: 'from-yellow-100 via-amber-100 to-orange-50',
-    tag: 'Summer Drop',
+    tag: 'Seasonal',
+    imageUrl: 'https://source.unsplash.com/1000x800/?swiss,roll,dessert&sig=206',
   },
   {
+    id: 'custom-nikah-floral-cake',
     name: 'Custom Nikah Floral Cake',
-    description: 'Soft ivory finish with handcrafted floral piping accents.',
+    description: 'Ivory finish with handcrafted floral piping details.',
     price: 78,
-    rating: 5.0,
-    imageTone: 'from-neutral-100 via-rose-50 to-amber-50',
+    rating: 5,
     tag: 'Custom',
+    imageUrl: 'https://source.unsplash.com/1000x800/?floral,cake,wedding&sig=207',
   },
   {
+    id: 'hazelnut-mocha-bento-cake',
     name: 'Hazelnut Mocha Bento Cake',
     description: 'Personal-sized cake layered with mocha cream and crunch.',
     price: 20,
     rating: 4.7,
-    imageTone: 'from-stone-100 via-orange-100 to-amber-100',
     tag: 'Mini Treat',
+    imageUrl: 'https://source.unsplash.com/1000x800/?mocha,cake,bento&sig=208',
   },
 ]
 
 export const bestsellers = [
   'Pistachio Rose Cake',
   'Lotus Dessert Cups',
-  'Triple Chocolate Brownies',
+  'Triple Chocolate Brownie Box',
   'Vanilla Berry Cupcakes',
   'Custom Celebration Cakes',
 ]
@@ -135,59 +146,53 @@ export const bestsellers = [
 export const trustPoints = [
   {
     title: 'Homemade',
-    text: 'Every order is baked in our home kitchen with personal care.',
-    icon: '🏡',
+    text: 'Every order is baked in our home kitchen with personal care and consistency.',
   },
   {
     title: 'Made From Scratch',
-    text: 'Fresh batters, fillings, and frostings made in-house each week.',
-    icon: '🥣',
+    text: 'Fresh batters, fillings, and frostings are prepared in-house for each batch.',
   },
   {
     title: 'Halal-Friendly',
-    text: 'Desserts are prepared with halal-friendly ingredients in mind.',
-    icon: '🌙',
+    text: 'Desserts are crafted with halal-friendly ingredient choices in mind.',
   },
   {
     title: 'Freshly Prepared',
-    text: 'No mass production. We bake close to your collection date.',
-    icon: '🕊️',
+    text: 'No mass production. Your desserts are prepared close to your date.',
   },
   {
     title: 'Customisable',
     text: 'Theme colours, flavours, toppers, and finishing can be tailored.',
-    icon: '🎨',
   },
   {
     title: 'Collection Only',
-    text: 'Based in East London, E17 for convenient local pickup.',
-    icon: '📍',
+    text: 'Local collection from East London, E17 for quality and freshness control.',
   },
 ]
 
 export const testimonials = [
   {
-    name: 'Amina R.',
+    name: 'Amina Rahman',
     order: 'Birthday Cake + Cupcakes',
-    text: 'Beautiful design and even better flavour. Everyone asked who made the cake.',
+    text: 'Beautiful design and amazing flavour balance. The cake looked premium and tasted even better.',
     rating: 5,
   },
   {
-    name: 'Farhan M.',
+    name: 'Farhan Malik',
     order: 'Brownie Box',
-    text: 'The brownies were rich, soft in the centre, and not too sweet. Ordered again the next week.',
+    text: 'Rich, fudgy, and fresh. Ordered once, then came back again within the week.',
     rating: 5,
   },
   {
-    name: 'Sana K.',
+    name: 'Sana Khan',
     order: 'Dessert Cups',
-    text: 'Perfect for our family gathering. Elegant presentation and very fresh.',
+    text: 'Perfect for our family gathering. Elegant presentation and smooth pickup process.',
     rating: 4,
   },
   {
-    name: 'Layla S.',
+    name: 'Layla Siddiqui',
     order: 'Custom Celebration Cake',
-    text: 'Exactly matched the brief. Smooth process from enquiry to collection.',
+    text: 'Exactly matched our design brief and delivery timing. Very reliable service.',
     rating: 5,
   },
 ]
@@ -196,27 +201,27 @@ export const faqItems = [
   {
     question: 'How far in advance should I place my order?',
     answer:
-      'For celebration cakes, we recommend at least 1 week notice. Smaller dessert orders usually need 48-72 hours depending on availability.',
+      'For custom cakes, please place your order at least 1 week in advance. Smaller dessert boxes usually need 48-72 hours depending on slots.',
   },
   {
     question: 'Do you offer delivery?',
     answer:
-      'This demo brand setup is collection only from East London, E17. Collection details are shared after order confirmation.',
+      'For this demo setup, orders are collection only from East London, E17. Collection instructions are shared after confirmation.',
   },
   {
-    question: 'Can I request a custom design or flavour?',
+    question: 'Can I request custom themes and flavour combinations?',
     answer:
-      'Yes. You can request custom themes, colours, messages, and flavour combinations. Share your inspiration in the enquiry form or WhatsApp.',
+      'Yes. You can share preferred colours, text toppers, theme references, and flavours in the checkout notes or by WhatsApp.',
   },
   {
     question: 'Are your desserts halal?',
     answer:
-      'Recent brand messaging indicates halal-friendly desserts. For specific ingredient checks, mention your needs when ordering.',
+      'The brand messaging indicates halal-friendly desserts. Please mention your exact requirements at checkout for confirmation.',
   },
   {
-    question: 'What about allergen information?',
+    question: 'How do allergens work?',
     answer:
-      'Common allergens like dairy, eggs, wheat, and nuts may be present. Please clearly mention allergies during enquiry so options can be discussed.',
+      'Common allergens such as dairy, eggs, wheat, and nuts may be present. Add allergy details in checkout notes before placing the order.',
   },
 ]
 
@@ -225,5 +230,6 @@ export const navLinks = [
   { label: 'Featured', href: '#featured' },
   { label: 'Story', href: '#story' },
   { label: 'Reviews', href: '#reviews' },
+  { label: 'Order', href: '#order' },
   { label: 'FAQ', href: '#faq' },
 ]

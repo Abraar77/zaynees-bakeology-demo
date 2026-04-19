@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { navLinks } from '../data/siteData'
 
-export function Navbar() {
+export function Navbar({ cartCount }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-cream-200/10 bg-espresso-950/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-cream-200/10 bg-espresso-950/85 backdrop-blur-xl">
       <nav className="section-shell flex h-20 items-center justify-between gap-4">
         <a href="#top" className="group">
           <p className="font-heading text-2xl font-semibold text-cream-50 sm:text-3xl">
@@ -39,6 +39,15 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="#order"
+            className="inline-flex items-center gap-2 rounded-full border border-cream-200/25 bg-cream-50/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-cream-50"
+          >
+            Cart
+            <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-gold-500 px-1.5 text-[11px] text-espresso-950">
+              {cartCount}
+            </span>
+          </a>
           <a href="#order" className="gold-btn px-5 py-2.5">
             Start Order
           </a>
@@ -58,6 +67,13 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="#order"
+              onClick={() => setOpen(false)}
+              className="rounded-xl border border-cream-200/15 bg-cream-50/5 px-4 py-3 text-sm text-cream-100/90"
+            >
+              Cart Items: {cartCount}
+            </a>
             <a href="#order" onClick={() => setOpen(false)} className="gold-btn text-center">
               Start Order
             </a>
