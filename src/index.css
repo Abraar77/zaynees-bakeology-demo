@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply m-0 bg-espresso-950 font-body text-cream-100 antialiased;
+  background-image:
+    radial-gradient(circle at 15% 18%, rgba(199, 154, 63, 0.14), transparent 32%),
+    radial-gradient(circle at 85% 4%, rgba(255, 255, 255, 0.07), transparent 24%),
+    radial-gradient(circle at 70% 62%, rgba(199, 154, 63, 0.09), transparent 30%);
+}
+
+* {
+  @apply border-cream-200/20;
+}
+
+::selection {
+  @apply bg-gold-500/30 text-cream-50;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center rounded-full border border-gold-500/45 bg-gold-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-gold-400;
+  }
+
+  .gold-btn {
+    @apply inline-flex items-center justify-center rounded-full border border-gold-500 bg-gold-500 px-6 py-3 text-sm font-semibold text-espresso-950 shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-espresso-950;
+  }
+
+  .ghost-btn {
+    @apply inline-flex items-center justify-center rounded-full border border-gold-500/55 bg-transparent px-6 py-3 text-sm font-semibold text-cream-50 transition duration-300 hover:-translate-y-0.5 hover:bg-gold-500/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-espresso-950;
+  }
+}
