@@ -1,62 +1,89 @@
 export const heroImage =
-  'https://source.unsplash.com/1400x1000/?bakery,cake,decorated&sig=301'
+  'https://images.pexels.com/photos/19190625/pexels-photo-19190625.jpeg?auto=compress&cs=tinysrgb&w=1600'
+
+export const storyImage =
+  'https://images.pexels.com/photos/25078482/pexels-photo-25078482.jpeg?auto=compress&cs=tinysrgb&w=1200'
 
 export const categories = [
   {
+    id: 'all',
+    name: 'All',
+    description: 'Browse all bakery categories.',
+    fromPrice: 12,
+    leadTime: '48 hrs',
+    badge: 'All Products',
+    imageUrl:
+      'https://images.pexels.com/photos/5410404/pexels-photo-5410404.jpeg?auto=compress&cs=tinysrgb&w=1200',
+  },
+  {
+    id: 'cakes',
     name: 'Signature Cakes',
-    description: 'Layered sponge cakes finished with smooth buttercream and elegant textures.',
+    description: 'Layered sponge cakes finished with premium buttercream.',
     fromPrice: 38,
     leadTime: '7 days notice',
     badge: 'Most Requested',
-    imageUrl: 'https://source.unsplash.com/900x700/?birthday,cake,bakery&sig=101',
+    imageUrl:
+      'https://images.pexels.com/photos/3094470/pexels-photo-3094470.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
+    id: 'cupcakes',
     name: 'Cupcakes',
-    description: 'Dozen boxes with premium buttercream swirls and seasonal toppings.',
+    description: 'Dozen boxes with elegant swirls and seasonal toppings.',
     fromPrice: 16,
     leadTime: '48 hrs',
     badge: 'Party Favourite',
-    imageUrl: 'https://source.unsplash.com/900x700/?cupcakes,bakery&sig=102',
+    imageUrl:
+      'https://images.pexels.com/photos/11803470/pexels-photo-11803470.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
+    id: 'brownies',
     name: 'Brownies',
-    description: 'Fudgy trays with rich cocoa and gourmet toppings.',
+    description: 'Fudgy squares with glossy ganache and rich cocoa.',
     fromPrice: 14,
     leadTime: '48 hrs',
     badge: 'Halal-Friendly',
-    imageUrl: 'https://source.unsplash.com/900x700/?brownies,chocolate,dessert&sig=103',
+    imageUrl:
+      'https://images.pexels.com/photos/13215205/pexels-photo-13215205.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
+    id: 'cookies',
     name: 'Cookies',
-    description: 'Soft center cookies baked in small batches for collection day.',
+    description: 'Soft center cookies baked in small handcrafted batches.',
     fromPrice: 12,
     leadTime: '48 hrs',
     badge: 'Fresh Batch',
-    imageUrl: 'https://source.unsplash.com/900x700/?cookies,bakery&sig=104',
+    imageUrl:
+      'https://images.pexels.com/photos/25078482/pexels-photo-25078482.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
+    id: 'dessert-cups',
     name: 'Dessert Cups',
-    description: 'Layered dessert cups perfect for events and gift tables.',
+    description: 'Layered dessert cups for events, gifting, and tables.',
     fromPrice: 24,
     leadTime: '3 days',
     badge: 'Event Ready',
-    imageUrl: 'https://source.unsplash.com/900x700/?dessert,cups,parfait&sig=105',
+    imageUrl:
+      'https://images.pexels.com/photos/14056740/pexels-photo-14056740.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
+    id: 'swiss-rolls',
     name: 'Swiss Rolls',
-    description: 'Soft sponge rolls with creamy fillings and glazed finishes.',
+    description: 'Soft sponge rolls with silky cream fillings.',
     fromPrice: 18,
     leadTime: '3 days',
     badge: 'Weekend Pick',
-    imageUrl: 'https://source.unsplash.com/900x700/?swiss,roll,cake&sig=106',
+    imageUrl:
+      'https://images.pexels.com/photos/14565947/pexels-photo-14565947.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
+    id: 'custom',
     name: 'Custom Celebration Cakes',
-    description: 'Tailored themes, colours, toppers, and flavours for milestones.',
+    description: 'Tailored themes, colors, toppers, and flavors.',
     fromPrice: 55,
     leadTime: '1 week+',
     badge: 'Custom Design',
-    imageUrl: 'https://source.unsplash.com/900x700/?custom,cake,wedding&sig=107',
+    imageUrl:
+      'https://images.pexels.com/photos/5194473/pexels-photo-5194473.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
 ]
 
@@ -64,74 +91,90 @@ export const featuredItems = [
   {
     id: 'pistachio-rose-cake',
     name: 'Pistachio Rose Cake',
-    description: 'Rose milk soak, pistachio cream, and delicate floral finish.',
+    category: 'cakes',
+    description: 'Rose milk sponge, pistachio cream, and floral finish.',
     price: 52,
     rating: 4.9,
     tag: 'Signature',
-    imageUrl: 'https://source.unsplash.com/1000x800/?rose,cake,dessert&sig=201',
+    imageUrl:
+      'https://images.pexels.com/photos/19190625/pexels-photo-19190625.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'triple-chocolate-brownie-box',
     name: 'Triple Chocolate Brownie Box',
-    description: 'Deep cocoa brownies with glossy ganache and sea-salt finish.',
+    category: 'brownies',
+    description: 'Fudgy brownie tray with dark chocolate drizzle.',
     price: 22,
     rating: 4.8,
     tag: 'Top Rated',
-    imageUrl: 'https://source.unsplash.com/1000x800/?brownie,chocolate,bakery&sig=202',
+    imageUrl:
+      'https://images.pexels.com/photos/13215205/pexels-photo-13215205.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'vanilla-berry-cupcake-dozen',
     name: 'Vanilla Berry Cupcake Dozen',
-    description: 'Soft vanilla cupcakes with berry compote and whipped cream.',
+    category: 'cupcakes',
+    description: 'Vanilla cupcakes with berry compote and cream swirls.',
     price: 28,
     rating: 4.7,
     tag: 'Dozen Pack',
-    imageUrl: 'https://source.unsplash.com/1000x800/?cupcake,vanilla,berry&sig=203',
+    imageUrl:
+      'https://images.pexels.com/photos/11803470/pexels-photo-11803470.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'lotus-biscoff-dessert-cups',
     name: 'Lotus Biscoff Dessert Cups',
-    description: 'Creamy lotus layers with biscuit crumble and caramel silk.',
+    category: 'dessert-cups',
+    description: 'Creamy lotus layers with biscuit crumble and caramel.',
     price: 26,
     rating: 4.9,
     tag: 'Trending',
-    imageUrl: 'https://source.unsplash.com/1000x800/?dessert,cup,cookie&sig=204',
+    imageUrl:
+      'https://images.pexels.com/photos/14056740/pexels-photo-14056740.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'kinder-cookie-sandwich',
     name: 'Kinder Cookie Sandwich',
-    description: 'Chunky cookies with a soft white chocolate hazelnut center.',
+    category: 'cookies',
+    description: 'Chunky sandwich cookies with hazelnut center.',
     price: 18,
     rating: 4.8,
-    tag: 'Freshly Baked',
-    imageUrl: 'https://source.unsplash.com/1000x800/?cookie,sandwich,dessert&sig=205',
+    tag: 'Fresh Batch',
+    imageUrl:
+      'https://images.pexels.com/photos/25078482/pexels-photo-25078482.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'mango-cream-swiss-roll',
     name: 'Mango Cream Swiss Roll',
-    description: 'Airy vanilla roll with mango cream and glazed fruit pearls.',
+    category: 'swiss-rolls',
+    description: 'Soft roll filled with mango cream and glaze.',
     price: 24,
     rating: 4.6,
     tag: 'Seasonal',
-    imageUrl: 'https://source.unsplash.com/1000x800/?swiss,roll,dessert&sig=206',
+    imageUrl:
+      'https://images.pexels.com/photos/14565947/pexels-photo-14565947.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'custom-nikah-floral-cake',
     name: 'Custom Nikah Floral Cake',
-    description: 'Ivory finish with handcrafted floral piping details.',
+    category: 'custom',
+    description: 'Elegant ivory style with handcrafted piped florals.',
     price: 78,
     rating: 5,
     tag: 'Custom',
-    imageUrl: 'https://source.unsplash.com/1000x800/?floral,cake,wedding&sig=207',
+    imageUrl:
+      'https://images.pexels.com/photos/5194473/pexels-photo-5194473.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
   {
     id: 'hazelnut-mocha-bento-cake',
     name: 'Hazelnut Mocha Bento Cake',
-    description: 'Personal-sized cake layered with mocha cream and crunch.',
+    category: 'cakes',
+    description: 'Mini cake with mocha cream and hazelnut crunch.',
     price: 20,
     rating: 4.7,
     tag: 'Mini Treat',
-    imageUrl: 'https://source.unsplash.com/1000x800/?mocha,cake,bento&sig=208',
+    imageUrl:
+      'https://images.pexels.com/photos/17488690/pexels-photo-17488690.jpeg?auto=compress&cs=tinysrgb&w=1200',
   },
 ]
 
@@ -146,27 +189,27 @@ export const bestsellers = [
 export const trustPoints = [
   {
     title: 'Homemade',
-    text: 'Every order is baked in our home kitchen with personal care and consistency.',
+    text: 'Every order is baked in our home kitchen with care and consistency.',
   },
   {
     title: 'Made From Scratch',
-    text: 'Fresh batters, fillings, and frostings are prepared in-house for each batch.',
+    text: 'Fresh batters and fillings are prepared in-house for every batch.',
   },
   {
     title: 'Halal-Friendly',
-    text: 'Desserts are crafted with halal-friendly ingredient choices in mind.',
+    text: 'Desserts are crafted with halal-friendly ingredient choices.',
   },
   {
     title: 'Freshly Prepared',
-    text: 'No mass production. Your desserts are prepared close to your date.',
+    text: 'No mass production. We bake close to your collection date.',
   },
   {
     title: 'Customisable',
-    text: 'Theme colours, flavours, toppers, and finishing can be tailored.',
+    text: 'Theme colors, toppers, and flavors can be tailored to your event.',
   },
   {
     title: 'Collection Only',
-    text: 'Local collection from East London, E17 for quality and freshness control.',
+    text: 'Local collection from East London, E17 for freshness control.',
   },
 ]
 
@@ -174,25 +217,25 @@ export const testimonials = [
   {
     name: 'Amina Rahman',
     order: 'Birthday Cake + Cupcakes',
-    text: 'Beautiful design and amazing flavour balance. The cake looked premium and tasted even better.',
+    text: 'Beautiful design and flavour. It looked premium and tasted even better.',
     rating: 5,
   },
   {
     name: 'Farhan Malik',
     order: 'Brownie Box',
-    text: 'Rich, fudgy, and fresh. Ordered once, then came back again within the week.',
+    text: 'Rich, fudgy, and fresh. Ordered once and re-ordered the same week.',
     rating: 5,
   },
   {
     name: 'Sana Khan',
     order: 'Dessert Cups',
-    text: 'Perfect for our family gathering. Elegant presentation and smooth pickup process.',
+    text: 'Perfect for our family gathering. Great presentation and smooth pickup.',
     rating: 4,
   },
   {
     name: 'Layla Siddiqui',
     order: 'Custom Celebration Cake',
-    text: 'Exactly matched our design brief and delivery timing. Very reliable service.',
+    text: 'Exactly matched our brief and was ready right on time.',
     rating: 5,
   },
 ]
@@ -211,25 +254,25 @@ export const faqItems = [
   {
     question: 'Can I request custom themes and flavour combinations?',
     answer:
-      'Yes. You can share preferred colours, text toppers, theme references, and flavours in the checkout notes or by WhatsApp.',
+      'Yes. You can share preferred colors, text toppers, theme references, and flavor details in checkout notes.',
   },
   {
     question: 'Are your desserts halal?',
     answer:
-      'The brand messaging indicates halal-friendly desserts. Please mention your exact requirements at checkout for confirmation.',
+      'The brand messaging indicates halal-friendly desserts. Please mention your exact requirements during checkout.',
   },
   {
     question: 'How do allergens work?',
     answer:
-      'Common allergens such as dairy, eggs, wheat, and nuts may be present. Add allergy details in checkout notes before placing the order.',
+      'Common allergens such as dairy, eggs, wheat, and nuts may be present. Add allergy details before placing the order.',
   },
 ]
 
 export const navLinks = [
+  { label: 'Home', href: '#top' },
   { label: 'Menu', href: '#menu' },
   { label: 'Featured', href: '#featured' },
   { label: 'Story', href: '#story' },
   { label: 'Reviews', href: '#reviews' },
-  { label: 'Order', href: '#order' },
   { label: 'FAQ', href: '#faq' },
 ]

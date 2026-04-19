@@ -7,19 +7,19 @@ export default {
     extend: {
       colors: {
         espresso: {
-          950: '#081915',
-          900: '#0f2b24',
-          800: '#1d443a',
+          950: '#090910',
+          900: '#121221',
+          800: '#1c1b2c',
         },
         cream: {
-          50: '#fffaf0',
-          100: '#f7ecd4',
-          200: '#ebd7ad',
+          50: '#ffffff',
+          100: '#f5f6fb',
+          200: '#e4e7f2',
         },
         gold: {
-          400: '#e3c173',
-          500: '#d4a144',
-          600: '#bb812d',
+          400: '#ff52b4',
+          500: '#ff0b8d',
+          600: '#d70073',
         },
       },
       fontFamily: {
@@ -27,9 +27,9 @@ export default {
         body: ['"Manrope"', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 18px 55px rgba(212, 161, 68, 0.28)',
-        card: '0 24px 46px rgba(6, 19, 16, 0.34)',
-        soft: '0 16px 32px rgba(8, 25, 21, 0.18)',
+        glow: '0 20px 55px rgba(255, 11, 141, 0.34)',
+        card: '0 20px 38px rgba(17, 18, 33, 0.18)',
+        soft: '0 12px 28px rgba(17, 18, 33, 0.14)',
       },
       keyframes: {
         float: {

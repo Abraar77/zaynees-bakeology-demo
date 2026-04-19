@@ -1,4 +1,5 @@
 import { heroImage } from '../data/siteData'
+import { RemoteImage } from './RemoteImage'
 
 const heroHighlights = [
   'Homemade desserts',
@@ -7,60 +8,68 @@ const heroHighlights = [
   'Collection only in E17',
 ]
 
-export function HeroSection() {
+export function HeroSection({ onCartOpen }) {
   return (
-    <section id="top" className="relative isolate pt-20 sm:pt-24">
-      <div className="section-shell grid items-center gap-10 pb-14 md:grid-cols-[1.1fr_0.9fr] md:pb-20">
+    <section
+      id="top"
+      className="relative isolate overflow-hidden bg-gradient-to-br from-espresso-950 via-espresso-900 to-espresso-950 pb-14 pt-16 sm:pb-16 sm:pt-20"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_80%,rgba(255,11,141,.34),transparent_30%),radial-gradient(circle_at_90%_30%,rgba(108,76,255,.16),transparent_35%)]" />
+      <div className="section-shell relative z-10 grid items-center gap-10 md:grid-cols-[1fr_0.95fr]">
         <div className="animate-fadeUp">
-          <span className="section-eyebrow">Boutique Home Bakery</span>
-          <h1 className="mt-6 max-w-2xl font-heading text-5xl font-semibold leading-[0.96] text-cream-50 sm:text-6xl lg:text-7xl">
-            Premium handmade desserts for East London moments worth celebrating.
+          <span className="inline-flex items-center rounded-full border border-gold-500/40 bg-gold-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">
+            Premium Home Bakery
+          </span>
+          <h1 className="mt-6 max-w-2xl font-heading text-5xl font-semibold leading-[0.95] text-cream-50 sm:text-6xl lg:text-7xl">
+            Taste the
+            <span className="ml-2 text-gold-400">Luxury</span>
+            <br />
+            of Handcrafted
+            <span className="ml-2 text-gold-400">Desserts</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-cream-100/80 sm:text-lg">
-            Zaynees Bakeology crafts rich cakes, cupcakes, brownies, and custom celebration desserts with
-            warmth, elegance, and small-batch care.
+            Zaynees Bakeology creates boutique cakes, brownies, cupcakes, and dessert cups for East London
+            celebrations with a premium look and homemade flavor.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#menu" className="gold-btn">
-              View Menu
+            <a href="#featured" className="gold-btn">
+              Explore Products
             </a>
-            <a href="https://wa.me/440000000000?text=Hi%20Zaynees%20Bakeology%2C%20I%20want%20to%20place%20an%20order." className="ghost-btn">
-              Order via WhatsApp
-            </a>
+            <button type="button" onClick={onCartOpen} className="ghost-btn border-cream-50/30 text-cream-50">
+              Open Cart
+            </button>
           </div>
-          <p className="mt-4 text-sm text-cream-100/65">Please order at least 1 week in advance for custom cakes.</p>
+          <p className="mt-4 text-sm text-cream-100/65">
+            Collection only in E17. Custom cakes require at least 1 week notice.
+          </p>
         </div>
 
         <div className="relative animate-float">
-          <div className="relative overflow-hidden rounded-[2rem] border border-gold-500/35 shadow-glow">
-            <img
+          <div className="overflow-hidden rounded-[2rem] border border-gold-500/35 shadow-glow">
+            <RemoteImage
               src={heroImage}
-              alt="Artisan decorated cake and desserts"
-              className="h-[26rem] w-full object-cover object-center sm:h-[30rem]"
+              alt="Premium decorated bakery cake"
+              className="h-[24rem] w-full object-cover sm:h-[30rem]"
               loading="eager"
+              fallbackText="Luxury Dessert Display"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/85 via-espresso-900/25 to-transparent" />
-            <div className="absolute inset-x-5 bottom-5 rounded-3xl border border-cream-200/20 bg-espresso-950/65 p-5 backdrop-blur-sm sm:inset-x-7 sm:bottom-7 sm:p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold-400">Featured Today</p>
-              <h3 className="mt-2 font-heading text-3xl font-semibold text-cream-50">Pistachio Rose Cake</h3>
-              <p className="mt-2 text-sm text-cream-100/85">
-                Floral sponge layers with pistachio cream and handcrafted finishing details.
-              </p>
-              <div className="mt-5 flex items-center justify-between">
-                <span className="rounded-full bg-gold-500 px-4 py-2 text-sm font-semibold text-espresso-950">From GBP 52</span>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-cream-100/75">Top Rated</span>
-              </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/80 via-transparent to-transparent" />
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-cream-200/20 bg-espresso-950/70 p-4 backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">Featured Today</p>
+              <p className="mt-1 font-heading text-3xl font-semibold text-cream-50">Pistachio Rose Cake</p>
+              <p className="mt-1 text-sm text-cream-100/80">Elegant floral sponge with pistachio cream layers.</p>
             </div>
           </div>
-          <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-gold-500/30 blur-2xl" />
-          <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-emerald-200/20 blur-2xl" />
         </div>
       </div>
 
-      <div className="section-shell pb-8">
-        <div className="grid gap-3 rounded-3xl border border-cream-200/15 bg-cream-50/5 p-4 backdrop-blur-sm sm:grid-cols-2 lg:grid-cols-4">
+      <div className="section-shell relative z-10 mt-10">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {heroHighlights.map((item) => (
-            <div key={item} className="rounded-2xl border border-cream-200/10 bg-espresso-900/60 px-4 py-3 text-center text-sm text-cream-100/90">
+            <div
+              key={item}
+              className="rounded-2xl border border-cream-200/15 bg-cream-50/5 px-4 py-3 text-center text-sm font-medium text-cream-100/90 backdrop-blur-sm"
+            >
               {item}
             </div>
           ))}

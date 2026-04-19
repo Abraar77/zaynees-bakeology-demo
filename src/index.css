@@ -9,12 +9,10 @@ html {
 }
 
 body {
-  @apply m-0 bg-espresso-950 font-body text-cream-100 antialiased;
+  @apply m-0 bg-cream-100 font-body text-espresso-900 antialiased;
   background-image:
-    radial-gradient(circle at 14% 18%, rgba(212, 161, 68, 0.24), transparent 34%),
-    radial-gradient(circle at 86% 6%, rgba(255, 250, 240, 0.1), transparent 22%),
-    radial-gradient(circle at 74% 68%, rgba(59, 127, 107, 0.22), transparent 35%),
-    linear-gradient(180deg, #081915 0%, #0a221d 44%, #081915 100%);
+    radial-gradient(circle at 12% 0%, rgba(255, 11, 141, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 20%, rgba(108, 76, 255, 0.08), transparent 34%);
 }
 
 * {
@@ -31,18 +29,18 @@ body {
   }
 
   .section-eyebrow {
-    @apply inline-flex items-center rounded-full border border-gold-500/45 bg-gold-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-gold-400;
+    @apply inline-flex items-center rounded-full border border-gold-500/30 bg-gold-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-gold-600;
   }
 
   .gold-btn {
-    @apply inline-flex items-center justify-center rounded-full border border-gold-500 bg-gold-500 px-6 py-3 text-sm font-semibold text-espresso-950 shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-espresso-950;
+    @apply inline-flex items-center justify-center rounded-full border border-gold-500 bg-gold-500 px-6 py-3 text-sm font-semibold text-cream-50 shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50;
   }
 
   .ghost-btn {
-    @apply inline-flex items-center justify-center rounded-full border border-gold-500/55 bg-transparent px-6 py-3 text-sm font-semibold text-cream-50 transition duration-300 hover:-translate-y-0.5 hover:bg-gold-500/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-espresso-950;
+    @apply inline-flex items-center justify-center rounded-full border border-espresso-900/25 bg-transparent px-6 py-3 text-sm font-semibold text-espresso-900 transition duration-300 hover:-translate-y-0.5 hover:bg-espresso-900/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-cream-50;
   }
 
   .glass-shell {
-    @apply border border-cream-200/15 bg-cream-50/5 backdrop-blur-xl;
+    @apply border border-cream-200/60 bg-cream-50/70 backdrop-blur-xl;
   }
 }

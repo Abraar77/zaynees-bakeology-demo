@@ -19,7 +19,7 @@ export function FAQSection({ faqItems }) {
             return (
               <article
                 key={faq.question}
-                className="overflow-hidden rounded-2xl border border-cream-200/15 bg-cream-50/5"
+                className="overflow-hidden rounded-2xl border border-cream-200 bg-cream-50"
               >
                 <button
                   type="button"
@@ -27,11 +27,11 @@ export function FAQSection({ faqItems }) {
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm font-semibold text-cream-50 sm:text-base">{faq.question}</span>
-                  <span className="text-xl text-gold-400">{isOpen ? '-' : '+'}</span>
+                  <span className="text-sm font-semibold text-espresso-950 sm:text-base">{faq.question}</span>
+                  <span className="text-xl text-gold-600">{isOpen ? '-' : '+'}</span>
                 </button>
                 {isOpen ? (
-                  <div className="border-t border-cream-200/15 px-5 py-4 text-sm leading-relaxed text-cream-100/80">
+                  <div className="border-t border-cream-200 px-5 py-4 text-sm leading-relaxed text-espresso-900/75">
                     {faq.answer}
                   </div>
                 ) : null}

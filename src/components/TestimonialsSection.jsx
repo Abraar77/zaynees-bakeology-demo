@@ -11,12 +11,13 @@ function Stars({ count }) {
 
 export function TestimonialsSection({ testimonials }) {
   return (
-    <section id="reviews" className="py-16 sm:py-20">
+    <section id="reviews" className="bg-espresso-950 py-16 sm:py-20">
       <div className="section-shell">
         <SectionHeading
           eyebrow="Testimonials"
           title="What Customers Say"
           description="Believable demo reviews for client presentation and social proof."
+          theme="dark"
         />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">

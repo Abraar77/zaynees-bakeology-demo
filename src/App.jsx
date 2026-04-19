@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AboutSection } from './components/AboutSection'
 import { BestsellerStrip } from './components/BestsellerStrip'
+import { CartDrawer } from './components/CartDrawer'
 import { CategoriesSection } from './components/CategoriesSection'
 import { FAQSection } from './components/FAQSection'
 import { FeaturedSection } from './components/FeaturedSection'
@@ -15,6 +16,8 @@ import { categories, faqItems, featuredItems, testimonials, trustPoints } from '
 
 function App() {
   const [cartItems, setCartItems] = useState([])
+  const [cartOpen, setCartOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState('all')
 
   const addToCart = (item) => {
     setCartItems((prev) => {
@@ -26,6 +29,7 @@ function App() {
       }
       return [...prev, { ...item, quantity: 1 }]
     })
+    setCartOpen(true)
   }
 
   const removeFromCart = (itemId) => {
@@ -46,28 +50,36 @@ function App() {
 
   return (
     <div className="relative overflow-x-clip">
-      <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,rgba(212,161,68,0.22),transparent_62%)]" />
-      <Navbar cartCount={cartCount} />
+      <Navbar cartCount={cartCount} onCartOpen={() => setCartOpen(true)} />
       <main>
-        <HeroSection />
+        <HeroSection onCartOpen={() => setCartOpen(true)} />
         <BestsellerStrip />
-        <CategoriesSection categories={categories} />
-        <FeaturedSection items={featuredItems} onAddToCart={addToCart} />
+        <CategoriesSection
+          categories={categories}
+          activeCategory={activeCategory}
+          onSelectCategory={setActiveCategory}
+        />
+        <FeaturedSection
+          items={featuredItems}
+          activeCategory={activeCategory}
+          onAddToCart={addToCart}
+        />
         <AboutSection />
         <WhyChooseSection trustPoints={trustPoints} />
         <TestimonialsSection testimonials={testimonials} />
-        <OrderSection
-          cartItems={cartItems}
-          onAddToCart={addToCart}
-          onRemoveFromCart={removeFromCart}
-          onUpdateCartQuantity={updateCartQuantity}
-          onClearCart={clearCart}
-          featuredItems={featuredItems}
-        />
+        <OrderSection onCartOpen={() => setCartOpen(true)} />
         <FAQSection faqItems={faqItems} />
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp onCartOpen={() => setCartOpen(true)} />
+      <CartDrawer
+        open={cartOpen}
+        cartItems={cartItems}
+        onClose={() => setCartOpen(false)}
+        onRemoveFromCart={removeFromCart}
+        onUpdateCartQuantity={updateCartQuantity}
+        onClearCart={clearCart}
+      />
     </div>
   )
 }

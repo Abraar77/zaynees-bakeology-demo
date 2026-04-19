@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="border-t border-cream-200/10 bg-espresso-900/95 pb-10 pt-12">
+    <footer className="border-t border-cream-200/10 bg-espresso-950 pb-10 pt-12">
       <div className="section-shell grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <h3 className="font-heading text-3xl font-semibold text-cream-50">Zaynees Bakeology</h3>
@@ -10,7 +10,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-gold-400">Instagram</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold-500">Instagram</p>
           <a
             href="https://www.instagram.com/zaynees_bakeology/"
             className="mt-2 inline-block text-sm text-cream-50 transition hover:text-gold-400"
@@ -20,13 +20,13 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-gold-400">Location</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold-500">Location</p>
           <p className="mt-2 text-sm text-cream-100/80">East London, E17</p>
           <p className="mt-1 text-sm text-cream-100/80">Collection only service</p>
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-gold-400">Enquiries</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold-500">Enquiries</p>
           <p className="mt-2 text-sm text-cream-100/80">DM or WhatsApp to place orders and request custom designs.</p>
           <div className="mt-3 flex gap-3">
             <a href="https://www.instagram.com/zaynees_bakeology/" className="text-sm text-cream-50 hover:text-gold-400">
